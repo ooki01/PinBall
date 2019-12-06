@@ -10,7 +10,6 @@ public class CloudController : MonoBehaviour {
 	//拡大率
 	private float magnification = 0.07f;
 
-
 	// Use this for initialization
 	void Start () {
 

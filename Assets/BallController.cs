@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 
@@ -34,19 +34,19 @@ public class BallController : MonoBehaviour {
 			this.gameoverText.GetComponent<Text> ().text = "Game Over";
 		}
 	}
-		void OnCollisionEnter(Collision other){
-			if(other.gameObject.tag == "SmallStarTag"){
-				this.score += 10;
-			}
-			else if(other.gameObject.tag == "LargeStarTag"){
-				this.score += 20;
-			}
-			else if(other.gameObject.tag == "SmallCloudTag"){
-				this.score += 30;
-			}
-			else if(other.gameObject.tag == "LargeCloudTag"){
-				this.score += 40;
-			}
-		    this.ScoreText.GetComponent<Text> ().text = "Score" + this.score;
+	void OnCollisionEnter(Collision other){
+		if(other.gameObject.tag == "SmallStarTag"){
+			this.score += 10;
+		}
+		else if(other.gameObject.tag == "LargeStarTag"){
+			this.score += 20;
+		}
+		else if(other.gameObject.tag == "SmallCloudTag"){
+			this.score += 30;
+		}
+		else if(other.gameObject.tag == "LargeCloudTag"){
+			this.score += 40;
+		}
+		this.ScoreText.GetComponent<Text> ().text = "Score" + this.score;
 	}
 }
